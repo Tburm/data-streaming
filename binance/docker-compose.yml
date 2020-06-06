@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  ob_btcusdt:
+    build: './get_order_book'
+    environment:
+      - BN_MARKET=btcusdt
+    volumes:
+      - /media/drive/data/:/data/:rw
+
+  ob_ethbtc:
+    build: './get_order_book'
+    environment:
+      - BN_MARKET=ethbtc
+    volumes:
+      - /media/drive/data/:/data/:rw
+
+  ob_xrpbtc:
+    build: './get_order_book'
+    environment:
+      - BN_MARKET=xrpbtc
+    volumes:
+      - /media/drive/data/:/data/:rw
+
+  tr_btcusdt:
+    build: './get_trades'
+    environment:
+      - BN_MARKET=btcusdt
+    volumes:
+      - /media/drive/data/:/data/:rw
+
+  tr_ethbtc:
+    build: './get_trades'
+    environment:
+      - BN_MARKET=ethbtc
+    volumes:
+      - /media/drive/data/:/data/:rw
+
+  tr_xrpbtc:
+    build: './get_trades'
+    environment:
+      - BN_MARKET=xrpbtc
+    volumes:
+      - /media/drive/data/:/data/:rw
